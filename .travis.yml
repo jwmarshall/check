@@ -10,6 +10,7 @@ services:
 
 before_install:
 - make deps
+- make swarm-init
 - make stack-up
 
 script:
