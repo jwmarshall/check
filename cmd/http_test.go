@@ -3,7 +3,7 @@ package cmd
 import "testing"
 
 func TestCheckHttp(t *testing.T) {
-	url := "https://www.weareintersect.com"
+	url := "https://www.google.ca"
 	status := 200
 	err := checkHTTP(url, status)
 	if err != nil {
@@ -12,7 +12,7 @@ func TestCheckHttp(t *testing.T) {
 }
 
 func TestCheckHTTPRedirect(t *testing.T) {
-	url := "http://weareintersect.com"
+	url := "http://google.ca"
 	status := 301
 	err := checkHTTP(url, status)
 	if err != nil {

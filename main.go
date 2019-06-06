@@ -14,7 +14,7 @@
 
 package main
 
-import "check/cmd"
+import "github.com/jwmarshall/check/cmd"
 
 func main() {
 	cmd.Execute()
