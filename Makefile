@@ -18,10 +18,10 @@ run:
 	go run main.go
 
 build: deps
-	go build
+	go build -ldflags="-X $$PACKAGE/$$NAME/cmd.Version=$$VERSION"
 
 build-prod: deps
-	go build -ldflags="$$LDFLAGS -X $$PACKAGE/$$NAME/cmd/version.version=$$VERSION"
+	go build -ldflags="$$LDFLAGS -X $$PACKAGE/$$NAME/cmd.Version=$$VERSION"
 
 test:
 	go test ./...
