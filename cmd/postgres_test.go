@@ -15,7 +15,7 @@ func TestCheckPostgres(t *testing.T) {
 }
 
 func TestCheckPostgresConnectionError(t *testing.T) {
-	Expected := "dial tcp [::1]:5434: connectex: No connection could be made because the target machine actively refused it."
+	Expected := "dial tcp [::1]:5434: connectex: connection refused"
 	host := "localhost"
 	port := 5434
 	user := "postgres"
