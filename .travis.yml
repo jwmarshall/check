@@ -1,0 +1,16 @@
+language: go
+
+go:
+- 1.12
+
+go_import_path: github.com/jwmarshall/check
+
+services:
+- docker
+
+before_install:
+- make deps
+- make stack-up
+
+script:
+- make test
